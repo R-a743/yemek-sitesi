@@ -1,0 +1,178 @@
+/*  TEMEL DEĞİŞKENLER & RESET  */
+:root {
+    --primary-color: #636e72;
+    --border-color: #2d3436;
+    --bg-color: #f5f6fa;
+    --card-bg: #ffffff;
+    --text-color: #2d3436;
+    --section-bg: #efefef;
+    --title-bg: #dfe6e9;
+}
+
+/*  KARANLIK MOD DEĞİŞKENLERİ  */
+body.dark-mode {
+    --bg-color: #2d3436;
+    --text-color: #dfe6e9;
+    --card-bg: #3d3d3d;
+    --section-bg: #4b4b4b;
+    --title-bg: #2d3436;
+    --border-color: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/*  GENEL BÖLÜM TASARIMI  */
+section, header, footer {
+    border: 2px solid var(--border-color);
+    margin-bottom: 20px;
+    background-color: var(--section-bg);
+    overflow: hidden; 
+}
+
+.section-title, h1 {
+    background-color: var(--title-bg);
+    border-bottom: 2px solid var(--border-color);
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.section-content {
+    padding: 20px;
+    background-color: var(--card-bg);
+}
+
+/*  ARAMA / FİLTRE BÖLÜMÜ */
+.search-container {
+    text-align: center; /* İçindeki elemanları yatayda ortalar */
+    display: block;
+    width: 100%;
+}
+
+.search-row {
+    margin-bottom: 15px;
+    display: block;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    border: 2px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    width: 280px; 
+    display: inline-block;
+    vertical-align: middle;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--border-color);
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+button:hover {
+    background-color: #2d3436;
+}
+
+/*  DURUM MESAJLARI  */
+.status-bar {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.stats-text {
+    margin: 0 10px;
+}
+
+/* KART LİSTESİ */
+.meal-grid {
+    text-align: center; /* Kartları sayfa ortasına hizalar */
+    padding: 10px;
+}
+
+.meal-card {
+    display: inline-block; /* Yan yana dizilmeyi sağlar */
+    vertical-align: top;
+    width: 280px; 
+    border: 2px solid var(--border-color);
+    background-color: var(--card-bg);
+    padding: 15px;
+    margin: 10px;
+    text-align: left; /* Kart içindeki yazılar sola yaslı */
+}
+
+.meal-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.card-info {
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+/*  DETAY PANELİ (FLOAT YÖNTEMİ) */
+.detail-box {
+    border: 2px solid var(--border-color);
+    padding: 20px;
+    background-color: var(--card-bg);
+    overflow: hidden; /* İçindeki float elemanları kapsar */
+}
+
+.detail-img {
+    float: left;
+    width: 300px;
+    border: 1px solid #000;
+    margin-right: 20px;
+}
+
+.detail-text {
+    overflow: hidden; /* Resmin yanına metnin akmasını sağlar */
+}
+
+/* --- MOBİL UYUM --- */
+@media (max-width: 650px) {
+    .meal-card {
+        width: 95%; /* Mobilde kartlar tam genişlik olur */
+    }
+    input[type="text"], select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .detail-img {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}

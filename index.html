@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheMealDB  - Yemek Portalı</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="section-title">🍽️ TheMealDB </div>
+        <div class="section-content" style="text-align: center;">
+            <p>Leziz yemekler ve tarifleriyle dolu bir sayfa</p>
+            <button id="themeToggle" style="margin-top: 10px;">🌙 Karanlık Tema</button>
+        </div>
+    </header>
+
+    <section id="search-area">
+        <div class="section-title">ARAMA / FİLTRE</div>
+        <div class="section-content">
+            <div class="search-container">
+                <div class="search-row">
+                    <input type="text" id="searchInput" placeholder="Yemek ismi yazın">
+                    <button id="searchBtn">Ara</button>
+                </div>
+                <div class="search-row">
+                    <select id="sortSelect">
+                        <option value="">Filtre Seç / Sıralama ▼</option>
+                        <option value="az">A-Z (Alfabetik)</option>
+                        <option value="za">Z-A (Ters Alfabetik)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="status-bar">
+        <span id="statusMessage">Arama yapmak için bir kelime girin.</span>
+        <span class="stats-text">⭐ Favori: <b id="favCount">0</b></span>
+        <span class="stats-text">Toplam: <b id="totalCount">0</b></span>
+    </div>
+
+    <section id="mealDetailArea">
+        <div class="section-title">DETAY PANELİ</div>
+        <div id="mealDetail" class="section-content">
+            <p style="text-align: center; color: #888;">Görüntülenecek bir detay yok. Bir ürünün detay butonuna basın.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">ÜRÜN LİSTESİ</div>
+        <div class="section-content">
+            <div id="mealList" class="meal-grid">
+                </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button id="loadMoreBtn" style="display: none;">Daha Fazla Yükle...</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-section">
+        <div class="section-title">HAKKIMIZDA</div>
+        <div class="section-content">
+            <p><strong></strong> mutfak tutkunlarını dünya mutfağının eşsiz tarifleriyle buluşturmak amacıyla tasarlanmış modern bir dijital platformdur. Bu proje, kullanıcıların binlerce yemek tarifine anında erişmesini ve damak zevklerine göre filtreleme yapmasını sağlar.</p>
+            <br>
+            <p>Teknik altyapısında <strong>TheMealDB API</strong> servisinden beslenen uygulamamız; <em>JavaScript</em> kullanılarak yapılmıştır.</p>
+        </div>
+    </section>
+
+    <section id="contact-section">
+        <div class="section-title">İLETİŞİM</div>
+        <div class="section-content" style="text-align: center;">
+            <p><b>E-Posta:</b> TheMealDB@email.com</p>
+            <p><b>LinkedIn / GitHub:</b> <a href="#">linktr.ee/ogrenci</a></p>
+        </div>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
