@@ -2,7 +2,7 @@
 🍽️ TheMealDB - Yemek Portalı
 TheMealDB API kullanılarak geliştirilmiş, kullanıcıların dünya mutfağından çeşitli yemek tariflerini aramasına, filtrelemesine ve favorilerine eklemesine olanak tanıyan modern bir web uygulamasıdır.
 
-CANLI DEMO :  https://r-a743.github.io/yemek-sitesi/
+CANLI DEMO :   https://r-a743.github.io/food-recipe-portal-concept/
 
 🚀 Özellikler
 Dinamik Arama: Yemek ismine göre anlık arama yapabilme.
